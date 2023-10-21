@@ -1,5 +1,5 @@
 import tkinter as tk
-from Wordy.utils.functionality import validate_words
+from utils.functionality import validate_words
 from tkinter import ttk
 
 
