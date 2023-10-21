@@ -1,4 +1,4 @@
-# Wordy
+# Word Helper
 
 Simple project, used to help with generating valid Bulgarian words  
 from a specified sequence of letters and length.
