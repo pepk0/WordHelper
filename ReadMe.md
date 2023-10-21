@@ -35,5 +35,5 @@ this program uses a Txt file of Bulgarian words, when a query is made with a seq
 
 ----
 ### Constraints
-while the program uses a list of 270k validated Bulgarian words, some of the mobile app's words may not appear in the words list.
+while the program uses a list of 230k+ validated Bulgarian words, some of the mobile app's words may not appear in the words list.
 
