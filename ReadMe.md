@@ -13,7 +13,8 @@ I made a program to  help me with solving word puzzles from a popular Bulgarian 
 
 #### Quick Demo:
 ![word_helper](https://i.imgur.com/YCFnT6z.gif)
----
+
+----
 
 ### Usage:
 
