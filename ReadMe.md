@@ -13,15 +13,17 @@ I made a program to  help me with solving word puzzles from a popular Bulgarian 
 
 #### Quick Demo:
 ![word_helper](https://i.imgur.com/YCFnT6z.gif)
+---
 
 ### Usage:
----- 
+
  * In the dropdown menu choose the desired length of characters.
  * Enter the letter sequence in the input frame.
  * Click the Generate button to get the found words.
 
-### Additional functionality
 ---- 
+
+### Additional functionality
 * __Cache functionality__
     > The cache functionality uses a Python dictionary to cache previous queries, future quires in the dictionary are instantly returned
 * __Validate option__
