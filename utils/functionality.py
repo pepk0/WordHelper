@@ -9,7 +9,7 @@ def get_words(characters: str, digits: int) -> list:
 
 
 def validate_words(prev_searches: dict, characters: str, length: int) -> str:
-    path = r"Wordy\words.txt"
+    path = r"words.txt"
     if len(characters) == 0 or len(characters) < length:
         return "You need more cyrillic letters"
     # if a number that is more then the range is picked,
