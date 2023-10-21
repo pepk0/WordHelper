@@ -22,6 +22,12 @@ I made a program to  help me with solving word puzzles from a popular Bulgarian 
  * Enter the letter sequence in the input frame.
  * Click the Generate button to get the found words.
 
+| **Program output** | **Crossword** |
+| --- | --- |
+| ![program with 3 letters](https://i.imgur.com/mUDbM0z.jpg) | ![crossword](https://i.imgur.com/GkPUtC2.jpg) |
+| ![program with 4 letters](https://i.imgur.com/0be41fJ.jpg) | ![crossword](https://i.imgur.com/2muhuM2.jpg) |
+| ![program with 5 letter](https://i.imgur.com/jl0cpTs.jpg) | ![crossword](https://i.imgur.com/1cRONjM.jpg) |
+
 ---- 
 
 ### Additional functionality
