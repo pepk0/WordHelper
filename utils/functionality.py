@@ -2,7 +2,7 @@ from itertools import permutations as permut
 
 
 def get_words(characters: str, digits: int) -> list:
-    # create all posable word combinations
+    # create all possible word combinations
     permutations = permut(characters, digits)
     result = ["".join(word) for word in permutations]
     return result
@@ -11,16 +11,16 @@ def get_words(characters: str, digits: int) -> list:
 def validate_words(prev_searches: dict, characters: str, length: int) -> str:
     path = r"words.txt"
     if len(characters) == 0 or len(characters) < length:
-        return "You need more cyrillic letters"
-    # if a number that is more then the range is picked,
-    # a default 3 letter one is chosen
+        return "You need more Cyrillic letters"
+    # If a number that is more than the range is picked,
+    # A default 3-letter one is chosen
     if length < 3 or length > 6:
         length = 3
     # check our previous queries before running the search,
     # to reduce response time
     if (characters, length) in prev_searches:
         return prev_searches[(characters, length)]
-    else:  # we have no cached results for our query
+    else:  # no cached results for our query
         result = ""
         words = get_words(characters, length)
         try:
@@ -32,6 +32,6 @@ def validate_words(prev_searches: dict, characters: str, length: int) -> str:
         except FileNotFoundError:
             result = "Missing words.txt, or path for words.txt is incorrect"
             return result
-        # add the query to the cache before returning it
+        # Add the query to the cache before returning it
         prev_searches[(characters, length)] = result
         return prev_searches[(characters, length)]
