@@ -19,9 +19,9 @@ I made a program to  help me with solving word puzzles from a popular Bulgarian 
 
 ### Usage:
 
- 1. In the dropdown menu choose the desired length of characters.
- 2. Enter the letter sequence in the input frame.
- 3. Click the Generate button to get the found words.
+ 1. In the dropdown menu choose the desired length of the output words.
+ 2. Enter the letter sequence in the text input bar.
+ 3. Click the Generate button.
 
 | **Program output** | **Crossword** |
 | --- | --- |
