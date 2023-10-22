@@ -5,8 +5,9 @@ from a specified sequence of letters and length.
 I made a program to  help me with solving word puzzles from a popular Bulgarian mobile app.
 
 ### The App:
-> The mobile app has some random letters and the goal is to create a valid word.
-> The problem is often you get stuck on a word and to get a hint, you need to spend money.    
+> The mobile app has some random letters and the goal is to create a valid word.  
+> Problem is often you get stuck on a word and to get a hint, you need to spend money.  
+> To counter this I made a word finder program.
 
 ![app](https://i.imgur.com/6vNWu8F.jpg)  
 
