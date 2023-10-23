@@ -38,7 +38,7 @@ I made this program to help me with solving word puzzles from a popular Bulgaria
 * __Validation__
     > This functionality validates the inputs and sets the correct parameters if any are wrong.
 * __File not found error handling__
-    > Missing file or wrong file path, a message is displayed if the file is missing or the path is incorrect, instead of the program crashing.
+    > A message is displayed if the file is missing or the path is incorrect, instead of the program crashing.
 ----
 
 ### How it works   
