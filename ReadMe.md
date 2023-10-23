@@ -2,7 +2,7 @@
 
 Simple project, used to help with generating valid Bulgarian words  
 from a specified sequence of letters and length.
-I made a program to  help me with solving word puzzles from a popular Bulgarian mobile app.
+I made this program to help me with solving word puzzles from a popular Bulgarian mobile app.
 
 ### The App:
 > The mobile app has some random letters and the goal is to create a valid word.  
@@ -38,7 +38,7 @@ I made a program to  help me with solving word puzzles from a popular Bulgarian 
 * __Validation__
     > This functionality validates the inputs and sets the correct parameters if any are wrong.
 * __File not found error handling__
-    > Missing file or wrong file path, a message is displayed if the file is missing or the path is incorrect, instead of the program crashing.
+    > A message is displayed if the file is missing or the path is incorrect, instead of the program crashing.
 ----
 
 ### How it works   
