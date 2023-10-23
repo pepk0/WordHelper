@@ -2,7 +2,7 @@
 
 Simple project, used to help with generating valid Bulgarian words  
 from a specified sequence of letters and length.
-I made a program to  help me with solving word puzzles from a popular Bulgarian mobile app.
+I made this program to help me with solving word puzzles from a popular Bulgarian mobile app.
 
 ### The App:
 > The mobile app has some random letters and the goal is to create a valid word.  
