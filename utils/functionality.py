@@ -13,11 +13,12 @@ def get_words(characters: str, digits: int) -> list:
 def validate_words(prev_searches: dict, characters: str, length: int) -> str:
     """Validates sequence of letters.
     
-    Arguments:
+    arguments:
     prev_searches -- dictionary, storing previous results of this function
     characters -- sequence of letters 
     length -- length of desired word validations
-    returns: string of all validated words matching the arguments
+    returns: 
+    string of all validated words matching the arguments
     """
     if len(characters) == 0 or len(characters) < length:
         return "You need more Cyrillic letters"
