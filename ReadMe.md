@@ -32,7 +32,7 @@ I made this program to help me with solving word puzzles from a popular Bulgaria
 
 ---- 
 
-### Additional functionality
+### Additional functionality:
 * __Cache functionality__
     > The cache functionality uses a Python dictionary to cache previous queries, future quires that are stored in the dictionary are instantly returned.
 * __Validation__
@@ -41,11 +41,11 @@ I made this program to help me with solving word puzzles from a popular Bulgaria
     > A message is displayed if the file is missing or the path is incorrect, instead of the program crashing.
 ----
 
-### How it works   
-this program uses a Txt file of Bulgarian words, when a query is made with a sequence of elements and a specific length a permutation function is called and all permutations with the given length are created and stored in a list, a validate word function is called and we loop through the list of validated words and check if any of them match the permutations
+### How it works:   
+This program uses a Txt file of Bulgarian words, when a query is made with a sequence of elements and a specific length a permutation function is called and all permutations with the given length are created and stored in a list, a validate word function is called and we loop through the list of validated words and check if any of them match the permutations.
 
 ----
-### Constraints
-while the program uses a list of 230k+ validated Bulgarian words, some of the mobile app's words may not appear in the words list.
+### Constraints:
+While the program uses a list of 230k+ validated Bulgarian words, some of the mobile app's words may not appear in the words list.
 
 ----
