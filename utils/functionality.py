@@ -1,12 +1,12 @@
 from itertools import permutations
 
 
-def get_words(characters: str, digits: int) -> list:
+def get_words(characters: str, digits: int) -> set:
     """Takes a sequence of characters and a length, 
     returns a list if all  permutations.
     """
     letter_combinations = permutations(characters, digits)
-    result = ["".join(word) for word in letter_combinations]
+    result = {"".join(word) for word in letter_combinations}
     return result
 
 
