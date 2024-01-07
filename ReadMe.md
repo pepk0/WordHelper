@@ -42,7 +42,7 @@ I made this program to help me with solving word puzzles from a popular Bulgaria
 ----
 
 ### How it works:   
-This program uses a Txt file of Bulgarian words, when a query is made with a sequence of elements and a specific length a permutation function is called and all permutations with the given length are created and stored in a list, a validate word function is called and we loop through the list of validated words and check if any of them match the permutations.
+This program uses a txt file of bulgarian words, when a query is made with a sequence of elements and a specific length, a permutation function is called and all permutations with the given length are created and stored in a list, a validate word function is called and a loop runs through the list of validated words, and checks if any of them match the permutations.
 
 ----
 ### Constraints:
