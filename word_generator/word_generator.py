@@ -4,14 +4,14 @@ from itertools import permutations
 
 
 class WordGenerator:
-    MAX_WORD_LENGTH = 6
     MIN_WORD_LENGTH = 1
+    MAX_WORD_LENGTH = 6
 
     def __init__(self, letters: str, word_length: int) -> None:
         self.word_length = word_length
         self.letters = letters
-        self.cache: dict = {}
-        self.__valid_words_list = os.path.join("valid_words", "words.txt")
+        self.__words_path = os.path.join("valid_words",
+                                         f"{self.word_length}_length_words.txt")
 
     @property
     def letters(self) -> str:
@@ -38,7 +38,7 @@ class WordGenerator:
     @word_length.setter
     def word_length(self, word_length: int) -> None:
         if not self.MIN_WORD_LENGTH < word_length <= self.MAX_WORD_LENGTH:
-            raise ValueError("Invalid length!")
+            raise ValueError("Invalid word length!")
         self.__word_length = word_length
 
     def get_permutations(self) -> set:
@@ -56,17 +56,15 @@ class WordGenerator:
             result = ""
             words = self.get_permutations()
             try:
-                with open(self.__valid_words_list, "r", encoding="utf-8") as f:
+                with open(self.__words_path, "r", encoding="utf-8") as f:
                     for word in f:
                         word = word.strip()
-                        if len(word) > self.word_length:
-                            break
                         if word in words:
                             result += f"{word} "
             except FileNotFoundError:
-                result = "Missing words.txt"
-                return result
+                return "Missing words.txt file!"
+
             # Add the query to the cache before returning it
             self.cache[(self.letters, self.word_length)] = result
 
-            return self.cache[(self.letters, self.word_length)]
+        return self.cache[(self.letters, self.word_length)]
