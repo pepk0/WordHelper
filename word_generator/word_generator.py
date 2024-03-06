@@ -11,7 +11,7 @@ class WordGenerator:
         self.word_length = word_length
         self.letters = letters
         self.cache: dict = {}
-        self.valid_words_list = os.path.join("valid_words", "words.txt")
+        self.__valid_words_list = os.path.join("valid_words", "words.txt")
 
     @property
     def letters(self) -> str:
@@ -41,22 +41,22 @@ class WordGenerator:
             raise ValueError("Invalid length!")
         self.__word_length = word_length
 
-    def get_words(self) -> set:
+    def get_permutations(self) -> set:
         """Takes a sequence of characters and a length, and
         returns a set if all  permutations."""
         letter_combinations = permutations(self.letters, self.word_length)
         word_combinations = {"".join(word) for word in letter_combinations}
         return word_combinations
 
-    def get_validate_words(self) -> str:
+    def get_valid_words(self) -> str:
         """"Loops through the valid words list checking if any word is in the
         permutation set if present the word is added to the result"""
         # check our previous queries
         if (self.letters, self.word_length) not in self.cache:
             result = ""
-            words = self.get_words()
+            words = self.get_permutations()
             try:
-                with open(self.valid_words_list, "r", encoding="utf-8") as f:
+                with open(self.__valid_words_list, "r", encoding="utf-8") as f:
                     for word in f:
                         word = word.strip()
                         if len(word) > self.word_length:

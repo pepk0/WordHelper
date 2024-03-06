@@ -15,7 +15,7 @@ class App(tk.Tk):
             try:
                 word_generator = WordGenerator(get_letters_entry.get(),
                                                int(length.get()))
-                found_words = word_generator.get_validate_words()
+                found_words = word_generator.get_valid_words()
             except (ValueError, FileNotFoundError) as exception:
                 found_words = exception
 
