@@ -6,6 +6,7 @@ from itertools import permutations
 class WordGenerator:
     MIN_WORD_LENGTH = 1
     MAX_WORD_LENGTH = 6
+    cache: dict = {}
 
     def __init__(self, letters: str, word_length: int) -> None:
         self.word_length = word_length
