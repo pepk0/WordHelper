@@ -18,13 +18,13 @@ def main() -> None:
             if len(word) > curr_word_length:
                 print(f"-- {len(word)} length words -- Done! --")
                 curr_word_length = len(word)
-                out_file_path = f"{curr_word_length}_length_words.txt"
+                out_file = f"{curr_word_length}_length_words.txt"
                 # clears previous files with this length
-                with open(out_file_path, "w", encoding="utf-8"):
+                with open(out_file, "w", encoding="utf-8"):
                     continue
 
             # puts all the words in the file
-            with open(out_file_path, "a", encoding="utf-8") as new_file:
+            with open(out_file, "a", encoding="utf-8") as new_file:
                 new_file.write(word + "\n")
 
 
