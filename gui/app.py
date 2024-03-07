@@ -4,7 +4,7 @@ from word_generator.word_generator import WordGenerator
 
 
 class App(tk.Tk):
-    def __init__(self, ):
+    def __init__(self):
         super().__init__()
         self.title("Word Helper")
         self.geometry("700x200")
