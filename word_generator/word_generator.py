@@ -4,8 +4,8 @@ from itertools import permutations
 
 
 class WordGenerator:
-    MIN_WORD_LENGTH = 1
-    MAX_WORD_LENGTH = 6
+    MIN_WORD_LENGTH = 2
+    MAX_WORD_LENGTH = 6  # this can be changed to the desired length
     cache: dict = {}
 
     def __init__(self, letters: str, word_length: int) -> None:
@@ -28,7 +28,7 @@ class WordGenerator:
                              f"- {self.MAX_WORD_LENGTH})")
         elif self.word_length > len(letters):
             raise ValueError(f"Cant make {self.word_length} letter word "
-                             f"with {len(letters)} provided letters")
+                             f"with {len(letters)} provided letters!")
 
         self.__letters = letters
 
@@ -59,6 +59,7 @@ class WordGenerator:
             try:
                 with open(self.__words_path, "r", encoding="utf-8") as f:
                     for word in f:
+                        # removes the new line at the end from the words
                         word = word.strip()
                         if word in words:
                             result += f"{word} "
