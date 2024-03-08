@@ -45,7 +45,7 @@ class App(tk.Tk):
         generate_button.grid(row=0, column=3)
 
     def get_words(self) -> None:
-        """Gets the validated words and presents them on the frame."""
+        """Gets the validated words and presents them."""
         try:
             word_generator = WordGenerator(self.get_letters_entry.get(),
                                            int(self.length.get()))
