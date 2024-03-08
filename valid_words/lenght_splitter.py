@@ -2,7 +2,7 @@ import os
 
 
 def main() -> None:
-    # the base words file holding all the words in one place
+    # the base words file containing all the words in one place
     total_words_path = os.path.join("base", "words.txt")
 
     curr_word_length = 1
@@ -11,7 +11,7 @@ def main() -> None:
             # removes the newline after the word
             word = word.strip()
 
-            # the dash causes problems with the length of the words
+            # words containing dashes are not present in the game
             if "-" in word:
                 continue
 
@@ -23,7 +23,7 @@ def main() -> None:
                 with open(out_file, "w", encoding="utf-8"):
                     continue
 
-            # puts all the words in the file
+            # puts all the words in the specific length file
             with open(out_file, "a", encoding="utf-8") as new_file:
                 new_file.write(word + "\n")
 
