@@ -1,25 +1,26 @@
 # Word Helper
 
-Simple project, used to help with generating valid Bulgarian words  
-from a specified sequence of letters and length.
-I made this program to help me with solving word puzzles from a popular
-Bulgarian mobile app.
-
-### The App:
-
-> The mobile app has some random letters and the goal is to create a valid
-> word.  
-> Problem is often you get stuck on a word and to get a hint, you need to spend
-> money.  
-> To counter this I made a word finder program.
-
-![app](https://i.imgur.com/6vNWu8F.jpg)
-
-----
+A program made to help with finding valid Bulgarian words.
+I enjoy crosswords, but sometimes I cant find (or don't even know) a valid
+word, to make my life easier, instead of going online or looking in a dictionary
+I automated the looking with Python.
 
 ### Quick Demo:
 
 ![word_helper](https://i.imgur.com/YCFnT6z.gif)
+
+### The Problem that inspired me:
+
+> In the below examples I have used a popular word puzzle app in Bulgaria that I
+> play.  
+> The mobile app has some random letters and the goal is to create a valid
+> word.  
+> Problem is often you get stuck on a word and to get a hint, you need to spend
+> money.
+
+![app](https://i.imgur.com/6vNWu8F.jpg)
+
+----
 
 ----
 
@@ -37,19 +38,34 @@ Bulgarian mobile app.
 
 ---- 
 
+## How to use:
+
+You can clone this repository and run the main.py file.  
+First you need to be in the cloned repository and then you can run:
+
+  ~~~ powershell
+  py main.py
+  ~~~
+
+Creating a virtual environment is recommended, you can create like this
+
+  ~~~ powershell
+  py -m virtualenv venv
+  ~~~
+
 ## Additional functionality:
 
-###  * __Cache functionality__
+###   * __Cache functionality__
 
 The cache functionality uses a Python dictionary to cache previous queries,
 future quires that are stored in the dictionary are instantly returned.
 
-###  * __Validation__
+###   * __Validation__
 
 This functionality validates the inputs displays the appropriate error message
 if any are wrong.
 
-###  * __File Manager__
+###   * __File Manager__
 
 The file manager system manages the txt files containing all the words.
 
