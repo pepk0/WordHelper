@@ -20,9 +20,23 @@ I automated the looking with Python.
 
 ![app](https://i.imgur.com/6vNWu8F.jpg)
 
-----
 
 ----
+
+## How to run:
+
+You can clone this repository and run the main.py file.  
+First you need to be in the cloned repository and then you can run:
+
+  ~~~ powershell
+  py main.py
+  ~~~
+
+Creating a virtual environment is recommended, you can create like this
+
+  ~~~ powershell
+  py -m virtualenv venv
+  ~~~
 
 ### Usage:
 
@@ -38,34 +52,19 @@ I automated the looking with Python.
 
 ---- 
 
-## How to use:
-
-You can clone this repository and run the main.py file.  
-First you need to be in the cloned repository and then you can run:
-
-  ~~~ powershell
-  py main.py
-  ~~~
-
-Creating a virtual environment is recommended, you can create like this
-
-  ~~~ powershell
-  py -m virtualenv venv
-  ~~~
-
 ## Additional functionality:
 
-###   * __Cache functionality__
+###    * __Cache functionality__
 
 The cache functionality uses a Python dictionary to cache previous queries,
 future quires that are stored in the dictionary are instantly returned.
 
-###   * __Validation__
+###    * __Validation__
 
 This functionality validates the inputs displays the appropriate error message
 if any are wrong.
 
-###   * __File Manager__
+###    * __File Manager__
 
 The file manager system manages the txt files containing all the words.
 
