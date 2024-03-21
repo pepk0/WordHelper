@@ -35,7 +35,7 @@ First you need to be in the cloned repository and then you can run:
 Creating a virtual environment is recommended, you can create like this
 
   ~~~ powershell
-  py -m virtualenv venv
+  py -m venv venv
   ~~~
 
 ### Usage:
