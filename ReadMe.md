@@ -1,6 +1,5 @@
 # Word Helper
 
-A program made to help with finding valid Bulgarian words.
 I enjoy crosswords, but sometimes I cant find (or don't even know) a valid
 word, to make my life easier, instead of going online or looking in a dictionary
 I automated the looking with Python.
