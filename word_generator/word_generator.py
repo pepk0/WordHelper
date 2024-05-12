@@ -44,7 +44,7 @@ class WordGenerator:
 
     def get_permutations(self) -> set:
         """Takes a sequence of characters and a length, and
-        returns a set if all  permutations."""
+        returns a set if all permutations."""
         letter_combinations = permutations(self.letters, self.word_length)
         word_combinations = {"".join(word) for word in letter_combinations}
         return word_combinations
@@ -68,5 +68,4 @@ class WordGenerator:
 
             # Add the query to the cache before returning it
             self.cache[(self.letters, self.word_length)] = result
-
         return self.cache[(self.letters, self.word_length)]
