@@ -15,6 +15,7 @@ class OutputFrame(Frame):
         self.sentence_entry.pack(pady=20)
 
     def print(self, words) -> None:
+        """Displays the words on the frame"""
         if isinstance(words, list):
             words = ", ".join(words)
         self.sentence_entry["text"] = words

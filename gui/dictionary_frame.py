@@ -14,7 +14,15 @@ class DictFrame(Frame):
         self.meaning_button.grid(row=0, column=1)
 
     def set_values(self, values: list) -> None:
+        """Sets the values to the option list
+        Args:
+            values: list containing all the values to be added
+        """
         self.found_words["values"] = values
 
     def get_word(self) -> str:
+        """Gets the word chosen from the option list
+        Returns:
+            string: the word chosen from the list frame
+        """
         return self.word.get()

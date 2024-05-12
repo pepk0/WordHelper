@@ -17,7 +17,7 @@ class App(tk.Tk):
         self.input_frame = InputFrame()
         self.dictionary = DictFrame()
 
-        # adding function to the button
+        # adding functionality to the buttons
         self.input_frame.generate_button["command"] = self.get_words
         self.dictionary.meaning_button["command"] = self.get_meaning
 
@@ -41,10 +41,13 @@ class App(tk.Tk):
         self.output_frame.print(found_words)
 
     def get_meaning(self) -> None:
+        """Opens a new window contain the information 
+        for the word in the choice box"""
         word = self.dictionary.get_word()
         if not word:
             return
         word_meaning = Dictionary(word).get_meaning()
         if not word_meaning:
             word_meaning = f"Няма намерена информация за думата {word}"
+        # opens up a new window containing the text meaning of the word
         MeaningFrame(self, word_meaning)

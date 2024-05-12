@@ -22,7 +22,15 @@ class InputFrame(Frame):
         self.generate_button.grid(row=0, column=3)
 
     def get_letter(self) -> str:
+        """Gets the letters from the letters entry frame
+        Returns:
+            string the letters from the entry frame
+        """
         return self.get_letters_entry.get()
 
     def get_length(self) -> int:
+        """Gets the length from the lengths option frame
+        Returns:
+            integer: the chosen number from the lengths option frame
+        """
         return int(self.length.get())
