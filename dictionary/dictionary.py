@@ -15,7 +15,7 @@ class Dictionary:
         for word in text:
             if word:
                 sanitized_word = " ".join(
-                    [word.strip() for word in word.split(" ") if word])
+                    word.strip() for word in word.split(" ") if word)
                 new_text.append(sanitized_word)
         return join_by.join(new_text)
 
