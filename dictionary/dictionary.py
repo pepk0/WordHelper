@@ -9,11 +9,20 @@ class Dictionary:
         self.word = word
         self.__word_url = f"https://rechnik.chitanka.info/w/{self.word}"
 
-    def fetch_meaning(self) -> str:
+    @staticmethod
+    def sanitize(text: list) -> list:
+        new_text = []
+        for word in text:
+            if word:
+                new_text.append(word.strip())
+        return new_text
+
+    def fetch_meaning(self) -> list | str:
         content = requests.get(self.__word_url).content
         soup = BeautifulSoup(content, "html.parser")
         try:
-            return soup.find("div", class_="data").text.strip()
+            text = soup.find("div", class_="data").text.split("\n")
+            return self.sanitize(text)
         except AttributeError:
             return f"Няма намерено значенине на думата: {self.word}!"
 
