@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import Toplevel, Label
 from gui.input_frame import InputFrame
 from word_generator.word_generator import WordGenerator
 from gui.output_frame import OutputFrame
@@ -43,5 +42,9 @@ class App(tk.Tk):
 
     def get_meaning(self) -> None:
         word = self.dictionary.get_word()
+        if not word:
+            return
         word_meaning = Dictionary(word).get_meaning()
+        if not word_meaning:
+            word_meaning = f"Няма намерена информация за думата {word}"
         MeaningFrame(self, word_meaning)

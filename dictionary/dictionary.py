@@ -10,21 +10,26 @@ class Dictionary:
         self.__word_url = f"https://rechnik.chitanka.info/w/{self.word}"
 
     @staticmethod
-    def sanitize(text: list) -> list:
+    def sanitize(text: list, join_by="\n") -> str:
         new_text = []
         for word in text:
             if word:
-                new_text.append(word.strip())
-        return new_text
+                sanitized_word = " ".join(
+                    [word for word in word.split(" ") if word])
+                new_text.append(sanitized_word)
+        return join_by.join(new_text)
 
-    def fetch_meaning(self) -> list | str:
+    def fetch_meaning(self) -> str:
         content = requests.get(self.__word_url).content
         soup = BeautifulSoup(content, "html.parser")
-        try:
-            text = soup.find("div", class_="data").text.split("\n")
-            return self.sanitize(text)
-        except AttributeError:
-            return f"Няма намерено значенине на думата: {self.word}!"
+
+        text = soup.find("div", class_="data")
+        if not text:
+            text = soup.find("p", class_="data")
+            if not text:
+                return self.sanitize([])
+            return self.sanitize(text.text.split("\n"), join_by=" ")
+        return self.sanitize(text.text.split("\n"))
 
     def get_meaning(self) -> str:
         if self.word not in self.CACHE:

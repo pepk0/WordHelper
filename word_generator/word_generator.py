@@ -63,6 +63,6 @@ class WordGenerator:
                     word = word.strip()
                     if word in words:
                         result.append(word)
-        # Add the query to the cache before returning it
-        self.cache[(self.letters, self.word_length)] = result
+            # Add the query to the cache before returning it
+            self.cache[(self.letters, self.word_length)] = result
         return self.cache[(self.letters, self.word_length)]
