@@ -11,6 +11,13 @@ class Dictionary:
 
     @staticmethod
     def sanitize(text: list, join_by="\n") -> str:
+        """Sanitizes all the words removing extra white space.
+        Args:
+            text (list): a list of all the sentences.
+            join_by (str): the delimiter that will join all the sentences.
+        Returns:
+            string: the joined sentences.
+        """
         new_text = []
         for word in text:
             if word:
@@ -20,6 +27,7 @@ class Dictionary:
         return join_by.join(new_text)
 
     def fetch_meaning(self) -> str:
+        """Scrapes the dictionary website for the meaning of the word."""
         content = requests.get(self.__word_url).content
         soup = BeautifulSoup(content, "html.parser")
 
@@ -32,6 +40,11 @@ class Dictionary:
         return self.sanitize(text.text.split("\n"))
 
     def get_meaning(self) -> str:
+        """Gets the meaning of a word from the cache if not present gets the 
+        meaning from the web.
+        Returns:
+        string: the meaning of the instance word.
+        """
         if self.word not in self.CACHE:
             meaning = self.fetch_meaning()
             self.CACHE[self.word] = meaning
