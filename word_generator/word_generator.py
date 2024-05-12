@@ -45,27 +45,24 @@ class WordGenerator:
     def get_permutations(self) -> set:
         """Takes a sequence of characters and a length, and
         returns a set if all permutations."""
-        letter_combinations = permutations(self.letters, self.word_length)
+        letter_combinations = permutations(self.letters.lower(),
+                                           self.word_length)
         word_combinations = {"".join(word) for word in letter_combinations}
         return word_combinations
 
-    def get_valid_words(self) -> str:
+    def get_valid_words(self) -> list:
         """"Loops through the valid words list checking if any word is in the
         permutation set if present the word is added to the result"""
         # check our previous queries
+        result = []
         if (self.letters, self.word_length) not in self.cache:
-            result = ""
             words = self.get_permutations()
-            try:
-                with open(self.__words_path, "r", encoding="utf-8") as f:
-                    for word in f:
-                        # removes the new line at the end from the words
-                        word = word.strip()
-                        if word in words:
-                            result += f"{word} "
-            except FileNotFoundError:
-                return "Missing words.txt file!"
-
-            # Add the query to the cache before returning it
-            self.cache[(self.letters, self.word_length)] = result
+            with open(self.__words_path, "r", encoding="utf-8") as f:
+                for word in f:
+                    # removes the new line at the end from the words
+                    word = word.strip()
+                    if word in words:
+                        result.append(word)
+        # Add the query to the cache before returning it
+        self.cache[(self.letters, self.word_length)] = result
         return self.cache[(self.letters, self.word_length)]
