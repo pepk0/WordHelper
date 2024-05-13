@@ -1,3 +1,4 @@
+from typing import List
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,7 +11,7 @@ class Dictionary:
         self.__word_url = f"https://rechnik.chitanka.info/w/{self.word}"
 
     @staticmethod
-    def sanitize(text: list, join_by="\n") -> str:
+    def sanitize(text: List[str], join_by="\n") -> str:
         """Sanitizes all the words removing extra white space.
         Args:
             text (list): a list of all the sentences.
