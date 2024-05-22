@@ -29,8 +29,8 @@ class InputFrame(Frame):
         return self.get_letters_entry.get()
 
     def get_length(self) -> int:
-        """Gets the length from the lengths option frame
+        """Gets the length from the lengths' option frame
         Returns:
-            integer: the chosen number from the lengths option frame
+            integer: the chosen number from the length option frame
         """
         return int(self.length.get())
