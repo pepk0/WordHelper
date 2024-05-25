@@ -31,7 +31,6 @@ class Dictionary:
         """Scrapes the dictionary website for the meaning of the word."""
         content = requests.get(self.__word_url).content
         soup = BeautifulSoup(content, "html.parser")
-
         text = soup.find("div", class_="data")
         if not text:
             text = soup.find("p", class_="data")
