@@ -12,7 +12,7 @@ class Dictionary:
 
     @staticmethod
     def sanitize(text: List[str], join_by="\n") -> str:
-        """Sanitizes all the words removing extra white space.
+        """sanitizes all the words removing extra white space.
         Args:
             text (list): a list of all the sentences.
             join_by (str): the delimiter that will join all the sentences.
